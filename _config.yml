@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Raoul's Blog
-subtitle: 做一个有爱情，有理想，有技术，有内涵的四有青年
+title: Raoul's Pub
+subtitle: 励志做一个有爱情，有理想，有技术，有内涵的四有青年
 description: Raoul's personal Blog
 author: Raoul1996
 email: baobaozhou199606@gmail.com
@@ -12,7 +12,7 @@ language: zh-CN
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
- url: http://yoursite.com
+url: http://raoul.coding.me
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -42,7 +42,7 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace:
-  
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -51,7 +51,7 @@ index_generator:
   path: ''
   per_page: 10
   order_by: -date
-  
+
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -69,12 +69,33 @@ time_format: HH:mm:ss
 per_page: 10
 pagination_dir: page
 
-# Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://git.coding.net/Raoul/Raoul.coding.me.git
+  branch: master
+# Disqus #Disqus评论，替换为多说
+disqus_shortname:
+# Extensions #拓展插件
+theme: yilia #主题
+exclude_generator:
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true
